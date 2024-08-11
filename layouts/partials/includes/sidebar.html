@@ -1,0 +1,16 @@
+<div class="split closed" id="split" tabindex="-1">
+  <div class="container">
+    {{/* Mobile navigation */}}
+    <div class="small-bubble">
+    <button id="menu-btn"
+            title="Toggle Menu"
+            name="menu"
+            aria-expanded="false"
+            class="small-hamburger"
+    ></button>
+    </div>
+    {{/* Everything else */}}
+    <div class="portrait"></div>
+    {{ partial "includes/menu.html" (dict "menuID" "main" "page" .) }}
+  </div>
+</div>

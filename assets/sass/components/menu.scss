@@ -1,0 +1,205 @@
+
+.icon-rss {
+  --icon: url('/svg/icons/rss-fill.svg');
+}
+
+.icon-github {
+  --icon: url('/svg/icons/github.svg');
+}
+
+.icon-mastodon {
+  --icon: url('/svg/icons/mastodon.svg');
+}
+
+.icon-home {
+  --icon: url('/svg/icons/house-fill.svg');
+}
+
+.icon::after {
+  content: '';
+
+  background-color: var(--text-split);
+  -webkit-mask-image: var(--icon);
+  mask-image: var(--icon);
+  mask-size: cover;
+
+  display: inline-flex;
+  width: var(--text-size);
+  height: var(--text-size);
+  margin-left: calc(0.25 * var(--text-size));
+  margin-right: -0.5rem;
+}
+
+.sidebar {
+  --text-size: 1.25rem;
+  font-size: var(--text-size);
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: relative;
+  text-align: right;
+  margin-right: 1rem;
+
+  .social-list {
+    justify-items: flex-end;
+  }
+
+  .entry {
+    text-wrap: nowrap;
+    transition: visibility 0.5s ease-out;
+  }
+
+  a, a:visited {
+    color: var(--text-split);
+  }
+
+  .gap {
+    height: 2rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: calc(1 * var(--text-size));
+  }
+}
+
+.portrait {
+  --size: var(--split-gutter);
+  --left: var(--split-margin);
+  flex-shrink: 0;
+
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  left: var(--left);
+
+  background-color: var(--background-split);
+  background-image: url('/img/me.jpg');
+  background-size: cover;
+  border-radius: 100%;
+  border: 2px solid var(--background-split);
+  transition: var(--transition);
+}
+
+.small-bubble {
+  visibility: hidden;
+  position: relative;
+  background-color: var(--background-split);
+  width: 2rem;
+  height: 2rem;
+  left: 1rem;
+
+  border-radius: 100%;
+  border: 2px solid var(--background-split);
+  transition: var(--transition);
+  flex-shrink: 0;
+
+  margin-bottom: 2rem;
+}
+
+.small-hamburger {
+  --size: 2rem;
+  opacity: 0;
+  width: var(--size);
+  height: var(--size);
+  cursor: pointer;
+  left: 0.25rem;
+
+  // Why button why??
+  position: relative;
+  top: -0.21rem;
+  padding: 0;
+
+  background-color: var(--text-split);
+  -webkit-mask-image: var(--icon);
+  mask-image: url('/svg/icons/chevron-right.svg');
+  mask-size: cover;
+}
+
+.main {
+  --split-margin: calc(30% + (var(--split-gutter) / 2) );
+}
+
+// OLD
+.split {
+  --text-size: 1.25rem;
+  font-size: var(--text-size);
+  position: fixed;
+  background-color: var(--background-split);
+  width: 100%;
+  max-width: 30%;
+  min-width: 2rem;
+  height: 100vh;
+  transition: var(--transition);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 4rem;
+
+    height: calc(100% - 64px);
+    width: 100%;
+    align-items: flex-end;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: $md) {
+  .small-bubble {
+    visibility: visible;
+    .small-hamburger {
+      opacity: 1;
+    }
+  }
+
+  .portrait {
+    --left: -2rem;
+    transition: left 0.5s ease-out;
+  }
+
+  .main {
+    --split-margin: 2rem;
+  }
+
+  .split {
+    --width: 100%;
+    position: fixed;
+    overflow: visible;
+    z-index: 9999;
+    width: var(--width);
+    max-width: 100%;
+  }
+
+  .split.closed {
+    left: calc(-100% + 2rem);
+  }
+  .split.expanded {
+    left: -6rem;
+    .small-bubble {
+      border-color: var(--background);
+      background-color: var(--background);
+
+      .small-hamburger {
+        --size: 2rem;
+        left: -.25rem;
+        transform: rotateZ(180deg);
+        background-color: var(--text);
+      }
+    }
+
+  }
+}
+
+@media (max-width: $sm) {
+  .main {
+    --split-margin: 0;
+  }
+  .split.closed {
+    left: -100%;
+  }
+}

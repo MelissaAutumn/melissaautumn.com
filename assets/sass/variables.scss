@@ -1,0 +1,35 @@
+$sm: 360px;
+$md: 640px;
+$lg: 1024px;
+
+:root {
+  --text: #322f2f;
+  --text-split: #fbfbfa;
+  --background: #f3f1f0;
+  --background-split: #394773;
+  --split-border: #b4b3b2;
+  --link-normal: #204d5e;
+  --link-underline-normal: #5BCEFA;
+  --link-visited: #64454b;
+  --link-underline-visited: #F5A9B8;
+  --selected-nav-weight: 700;
+  --page-padding: 2rem;
+  --main-box-sizing: border-box;
+  --outline: 4px #c192f1 double;
+
+
+  --split-gutter: 192px;
+  --split-margin: calc(var(--split-gutter) / 2);
+
+  --transition: width 0.5s ease-out,
+                height 0.5s ease-out,
+                left 0.5s ease-out,
+                top 0.5s ease-out,
+                opacity 0.1s linear;
+}
+
+a, button, input, select, .small-bubble {
+  :focus-within, :focus {
+    outline: var(--outline);
+  }
+}

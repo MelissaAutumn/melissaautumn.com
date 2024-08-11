@@ -1,0 +1,12 @@
+{{ with resources.Get "js/main.js" | js.Build "js/main.js" | minify | fingerprint }}
+<script defer src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}"></script>
+{{ end }}
+{{ with resources.Get "js/umami.js" | js.Build "js/data.js" | fingerprint }}
+<script
+  defer
+  src="{{ .RelPermalink }}"
+  data-website-id="{{ $.Site.Params.Umami.websiteId }}"
+  data-host-url="{{ $.Site.Params.Umami.url }}"
+  integrity="{{ .Data.Intergrity }}"
+></script>
+{{ end }}

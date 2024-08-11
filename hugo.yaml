@@ -1,0 +1,28 @@
+baseURL: /
+languageCode: en-ca
+title: Melissa Autumn
+enableRobotsTXT: true
+params:
+  umami:
+    websiteId: 104b0423-4782-48ec-a10d-49227b8e4d11
+    url: https://api-gateway.umami.dev
+  social:
+    mastodon:
+      url: 'https://mstdn.social/@oopsallnaps'
+      handle: 'oopsallnaps'
+    github:
+      url: https://github.com/MelissaAutumn
+      handle: MelissaAutumn
+    #rss:
+    #  url: '/blog/index.xml'
+    #  handle: 'RSS Feed'
+outputs:
+  home:
+    - html
+  section:
+    - html
+  taxonomy:
+    - html
+  term:
+    - html
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js page-{{ .Slug }}">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {{ block "title" . -}}
+      {{ .Site.Title }}
+    {{- end }}
+  </title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link rel="icon" type="image/x-icon" href="/svg/trans.svg">
+    {{ partial "includes/scripts.html" . }}
+    {{ partial "includes/styles.html" . }}
+</head>
+<body>
+{{ partial "includes/sidebar.html" . }}
+<div class="main">
+  {{ block "main" . }}{{ end }}
+  {{ block "footer" . }}{{ end }}
+</div>
+</body>
+</html>

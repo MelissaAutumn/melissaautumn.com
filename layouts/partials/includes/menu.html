@@ -9,7 +9,7 @@
     <ul class="social-list">
       {{- range $key, $value := site.Params.Social }}
         <li>
-          <a class="entry icon-{{ $key }} icon" href="{{ $value.url }}" rel="me" target="_blank">{{ $value.handle }}</a>
+          <a class="entry icon-{{ $key }} icon" href="{{ $value.url }}" rel="me nofollow" target="_blank">{{ $value.handle }}</a>
         </li>
       {{- end }}
     </ul>

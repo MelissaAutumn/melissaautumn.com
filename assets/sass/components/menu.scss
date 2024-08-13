@@ -42,6 +42,7 @@
   position: relative;
   text-align: right;
   margin-right: 1rem;
+  margin-bottom: 2rem;
 
   .social-list {
     justify-items: flex-end;
@@ -141,7 +142,6 @@
     flex-direction: column;
     position: absolute;
     margin-top: 4rem;
-
     height: calc(100% - 64px);
     width: 100%;
     align-items: flex-end;

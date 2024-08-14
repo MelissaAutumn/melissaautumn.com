@@ -64,6 +64,7 @@ ul {
   font-weight: bold;
 }
 
+
 .main {
   display: flex;
   flex-direction: column;
@@ -71,6 +72,11 @@ ul {
   padding: var(--page-padding);
   box-sizing: var(--main-box-sizing);
   margin: 0 auto 0 var(--split-margin);
+}
+
+// TODO: Rename this..
+main {
+  max-width: 700px;
 }
 
 .employment-history {
@@ -111,7 +117,7 @@ ul {
   display: flex;
   flex-direction: row;
 
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
@@ -135,6 +141,6 @@ ul {
   .work-url {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }

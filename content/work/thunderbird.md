@@ -11,4 +11,4 @@ weight: 10
 ---
 I'm currently a Sr Software Engineer, Services at Thunderbird.
 
-My day-to-day includes triaging github issues, fixing bugs, and adding new features on projects such as [thunderbird.net](https://www.thunderbird.net) and [addons.thunderbird.net](https://addons.thunderbird.net). 
+I primarily work on services like [Thunderbird Appointment](https://appointment.day) along with triaging github issues, fixing bugs, and adding new features on projects such as [thunderbird.net](https://www.thunderbird.net) and [addons.thunderbird.net](https://addons.thunderbird.net). 

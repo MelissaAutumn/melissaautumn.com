@@ -15,6 +15,10 @@
   --icon: url('/svg/icons/house-fill.svg');
 }
 
+.icon-codeberg {
+  --icon: url('/svg/icons/codeberg.svg');
+}
+
 .icon::after {
   content: '';
 
@@ -24,10 +28,11 @@
   mask-size: cover;
 
   display: inline-flex;
-  width: var(--text-size);
-  height: var(--text-size);
+  width: 1.0rem;
+  height: 1.0rem;
+  padding-left: 0.1rem;
   margin-left: calc(0.25 * var(--text-size));
-  margin-right: -0.5rem;
+  margin-right: -0.4rem;
 }
 
 .sidebar {

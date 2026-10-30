@@ -1,5 +1,5 @@
 baseURL: /
-languageCode: en-ca
+locale: en-ca
 title: Melissa Autumn
 enableRobotsTXT: true
 params:
@@ -11,8 +11,11 @@ params:
       url: 'https://mstdn.social/@oopsallnaps'
       handle: 'oopsallnaps'
     github:
-      url: https://github.com/MelissaAutumn
-      handle: MelissaAutumn
+      url: 'https://github.com/MelissaAutumn'
+      handle: 'MelissaAutumn'
+    codeberg:
+      url: https://codeberg.org/oopsallnaps
+      handle: 'oopsallnaps'
     #rss:
     #  url: '/blog/index.xml'
     #  handle: 'RSS Feed'
@@ -25,4 +28,7 @@ outputs:
     - html
   term:
     - html
-
+security:
+  allowContent:
+    - '^text/html$'
+    - '^text/markdown$'
